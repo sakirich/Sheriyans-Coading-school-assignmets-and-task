@@ -1,1 +1,50 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#first{
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 
+    30px;
+}
+#second{
+    background-color: #f2f2f2;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 30px
+}
+#third{
+    background-color: #15f809;
+    color: rgb(217, 15, 15);
+    text-align: center;
+    padding: 30px;
+}
+#fourth{
+    background-color: #f0e315;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    padding: 30px;
+}
+#fifth{
+    background-color: #f315e3;
+    color: rgb(45, 10, 10);
+    text-align: center;
+    padding: 30px;
+}
+#sixth{
+    background-color: #000000;
+    color: rgb(243, 234, 234);
+    text-align: center;
+    padding: 10px;
+}
+.sigma{
+    margin-top: 10px;
+    background-color: white;
+}
