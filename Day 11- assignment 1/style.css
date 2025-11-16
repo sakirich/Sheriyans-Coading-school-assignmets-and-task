@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Cyber\ Blast.otf') format('woff2'),
+         url('./Cyber\ Blast.otf') format('woff'),
+         url('./Cyber\ Blast.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url('./SDGlitch_Demo.ttf') format('woff2'),
+         url('./SDGlitch_Demo.ttf') format('woff'),
+         url('./SDGlitch_Demo.ttf') format('truetype');
+}
+#main
+{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./sigma.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    
+   
+ 
+    color: azure;
+    font-family: 'MyFont';
+    font-size: 40px;
+    font-weight: 800px;
+    text-align: center;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+     
+
+         
+}
+button
+{
+    margin-top: 30px;
+    padding: 25px 50px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    color: rgba(188, 246, 13, 0.91);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid azure;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+     text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+}
+
+button:hover {
+    background-color: #f20dc0;
+    transform: scale(1.05);
+}
+
