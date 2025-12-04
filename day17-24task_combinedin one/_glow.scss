@@ -1,0 +1,16 @@
+@mixin glow($color)
+{
+    text-shadow: 0 0 4px $color,
+                 0 0 8px $color,
+                 0 0 16px $color;
+}
+
+@mixin bentoheading
+{   
+    h3{
+         font-size: 3rem;
+         text-align: center;
+         padding-top: 2%;
+       }
+
+}

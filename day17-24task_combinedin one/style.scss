@@ -1,0 +1,339 @@
+@use 'glow';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: japa;
+    src: url("./Sukajan\ Brush\ Demo.otf");
+}
+main{
+      padding-top: 20%;
+      background-color: black;
+}
+    
+    section.hero{
+    height: 25vh;
+    width: 100%;
+    background-color: black;
+    background-image: url('./herocar.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: visible;
+   
+    
+      h1{
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        font-family: japa;
+        position: absolute;
+        margin-top: -15%;
+        margin-left: 0;
+           &:hover{
+               @include glow.glow(white); 
+           }
+      }
+         .hero_img{
+            padding-top: 20%;
+         }
+
+    .transperent{
+        background-color: rgb(1, 1, 1);
+        height: 7vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(35%);
+        filter: blur(10px);
+    }        
+}
+section.about
+{
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding-top: 10%;
+        
+        h2{
+            padding-left: 5%;
+        }
+        p{
+            text-align: center;
+            text-align: justify;
+            padding: 5% 5%;
+            line-height: 2rem;
+            font-size: 1rem;
+        }
+        .showroom{
+            height: 50vh;
+            width: 100%;
+            background-image: url('./showroom.png');
+            background-size: cover;
+            background-position: center;
+            margin-top: 5%;
+             transition: transform 0.5s ease, filter 0.5s ease;
+        }
+              .showroom:hover{
+                transform: scale(1.1) ;   /* zoom + slight tilt */
+                   /* glow effect */
+            }
+               
+       
+
+}
+
+ section.bento{
+                background-color: black;
+                height: 100vh;
+                width: 100%;
+             .background{
+                height: 100vh;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                background-size: cover;
+                background-position: center;
+                border-radius: 5px;
+                    .bentogrid{
+                        display: grid;
+                        gap: 0.5%;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: repeat(5, auto);
+                        grid-template-areas: 
+                        "bento1"
+                        "bento2"
+                        "bento3"
+                        "bento4"
+                        "bento5";
+                                     
+                            .bento1{
+                                grid-area: bento1;
+                                height: 100vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-image: url('./service.png');
+                                background-size: cover;
+                                background-position: center;
+                                
+                               
+                                   h3{
+                                     font-size: 3rem;
+                                      text-align: center;
+                                      padding-top: 2%;
+                                   }
+                                   p{
+                                        font-size: 1.25rem;
+                                        text-align: left;
+                                        padding-left: 5%;
+                                        padding-right: 5%;
+                                   }
+                            }
+                            .bento2{
+                                grid-area: bento2;
+                                height: 50vh;
+                                width: 100%;
+                                background-image: url(./emi.png);
+                                background-size: cover;
+                                 border-radius: 10%;
+                                background-position: center;
+                                   @include glow.bentoheading();
+                            }
+                            .bento3{
+                                grid-area: bento3;
+                                height: 50vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-color: coral;
+                                background-image: url(./exchange.png);
+                                background-size: cover;
+                                background-position: center;
+                                      @include glow.bentoheading();
+                        
+                            }
+                            .bento4{
+                                grid-area: bento4;
+                                height: 50vh;
+                                border-radius: 10%;
+                                width: 100%;
+                                background-color: aquamarine;
+                                        @include glow.bentoheading();
+                                background-image: url(./savings.png);
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .bento5{
+                                grid-area: bento5;
+                                height: 50vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-color: rgb(214, 2, 2);
+                                        @include glow.bentoheading();
+                                background-image: url(./booknow.jpg);
+                                background-size: cover;
+                                background-position: center;
+                            }
+                    }
+            }
+        }
+ 
+
+@media (min-width:1200px){
+    .main{
+        height: 200vh;
+    }
+    
+    section.hero{
+        height: auto;
+        h1{
+            font-size: 7rem;
+            top: 1%;
+            margin-left: 20%;
+            position: absolute;
+            
+
+        }
+        .hero_img{
+        
+            height: 65vh;
+            width: 100%;
+            background-size: contain;
+            background-position: center;
+            word-spacing: 10%;
+            
+        }
+    }
+
+    section.about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "about showroom";
+         h2{
+                font-size: 3rem;
+            }
+        p{
+                font-size: 1.5rem;
+                margin-right: 10%;
+                margin-top: -63%;
+                                                    
+
+            }
+        .showroom{
+            grid-area: showroom;
+            background-image: url('./showroom.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            padding-bottom: 40%;
+
+            &:hover{
+                @include glow.glow(white);
+            }
+        }
+        .about{
+            grid-area: about;
+        }
+    }
+    section.bento{
+         background-color: black;
+                height: 100vh;
+                width: 100%;
+          .background{
+                height: 100vh;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                background-size: cover;
+                background-position: center;
+                border-radius: 5px;
+                    .bentogrid{
+                        display: grid;
+                        gap: 20px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        grid-template-columns: 4fr 2fr 2fr;
+                        grid-template-rows: 2fr 2fr;
+                        grid-template-areas: 
+                        "bento1 bento2 bento3"
+                        "bento1 bento4 bento5";
+                                     
+                            .bento1{
+                                grid-area: bento1;
+                                height: 100vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-image: url('./service.png');
+                                background-size: cover;
+                                background-position: center;
+                                
+                               
+                                   h3{
+                                     font-size: 3rem;
+                                      text-align: center;
+                                      padding-top: 2%;
+                                   }
+                                   p{
+                                        font-size: 1.25rem;
+                                        text-align: left;
+                                        padding-left: 5%;
+                                        padding-right: 5%;
+                                   }
+                            }
+                            .bento2{
+                                grid-area: bento2;
+                                height: 50vh;
+                                width: 100%;
+                                background-image: url(./emi.png);
+                                background-size: cover;
+                                 border-radius: 10%;
+                                background-position: center;
+                                   @include glow.bentoheading();
+                            }
+                            .bento3{
+                                grid-area: bento3;
+                                height: 50vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-color: coral;
+                                background-image: url(./exchange.png);
+                                background-size: cover;
+                                background-position: center;
+                                      @include glow.bentoheading();
+                        
+                            }
+                            .bento4{
+                                grid-area: bento4;
+                                height: 50vh;
+                                border-radius: 10%;
+                                width: 100%;
+                                background-color: aquamarine;
+                                        @include glow.bentoheading();
+                                background-image: url(./savings.png);
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .bento5{
+                                grid-area: bento5;
+                                height: 50vh;
+                                width: 100%;
+                                border-radius: 10%;
+                                background-color: rgb(214, 2, 2);
+                                        @include glow.bentoheading();
+                                background-image: url(./booknow.jpg);
+                                background-size: cover;
+                                background-position: center;
+                            }
+                       
+                                     
+                           
+                    }
+            }
+        }
+    
+}

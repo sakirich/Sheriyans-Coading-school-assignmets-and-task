@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: japa;
+  src: url("./Sukajan Brush Demo.otf");
+}
+main {
+  padding-top: 20%;
+  background-color: black;
+}
+
+section.hero {
+  height: 25vh;
+  width: 100%;
+  background-color: black;
+  background-image: url("./herocar.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: visible;
+}
+section.hero h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-family: japa;
+  position: absolute;
+  margin-top: -15%;
+  margin-left: 0;
+}
+section.hero h1:hover {
+  text-shadow: 0 0 4px white, 0 0 8px white, 0 0 16px white;
+}
+section.hero .hero_img {
+  padding-top: 20%;
+}
+section.hero .transperent {
+  background-color: rgb(1, 1, 1);
+  height: 7vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(35%);
+  filter: blur(10px);
+}
+
+section.about {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding-top: 10%;
+}
+section.about h2 {
+  padding-left: 5%;
+}
+section.about p {
+  text-align: center;
+  text-align: justify;
+  padding: 5% 5%;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+section.about .showroom {
+  height: 50vh;
+  width: 100%;
+  background-image: url("./showroom.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 5%;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+section.about .showroom:hover {
+  transform: scale(1.1); /* zoom + slight tilt */
+  /* glow effect */
+}
+
+section.bento {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+}
+section.bento .background {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+section.bento .background .bentogrid {
+  display: grid;
+  gap: 0.5%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "bento1" "bento2" "bento3" "bento4" "bento5";
+}
+section.bento .background .bentogrid .bento1 {
+  grid-area: bento1;
+  height: 100vh;
+  width: 100%;
+  border-radius: 10%;
+  background-image: url("./service.png");
+  background-size: cover;
+  background-position: center;
+}
+section.bento .background .bentogrid .bento1 h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+section.bento .background .bentogrid .bento1 p {
+  font-size: 1.25rem;
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+section.bento .background .bentogrid .bento2 {
+  grid-area: bento2;
+  height: 50vh;
+  width: 100%;
+  background-image: url(./emi.png);
+  background-size: cover;
+  border-radius: 10%;
+  background-position: center;
+}
+section.bento .background .bentogrid .bento2 h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+section.bento .background .bentogrid .bento3 {
+  grid-area: bento3;
+  height: 50vh;
+  width: 100%;
+  border-radius: 10%;
+  background-color: coral;
+  background-image: url(./exchange.png);
+  background-size: cover;
+  background-position: center;
+}
+section.bento .background .bentogrid .bento3 h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+section.bento .background .bentogrid .bento4 {
+  grid-area: bento4;
+  height: 50vh;
+  border-radius: 10%;
+  width: 100%;
+  background-color: aquamarine;
+  background-image: url(./savings.png);
+  background-size: cover;
+  background-position: center;
+}
+section.bento .background .bentogrid .bento4 h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+section.bento .background .bentogrid .bento5 {
+  grid-area: bento5;
+  height: 50vh;
+  width: 100%;
+  border-radius: 10%;
+  background-color: rgb(214, 2, 2);
+  background-image: url(./booknow.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.bento .background .bentogrid .bento5 h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    height: 200vh;
+  }
+  section.hero {
+    height: auto;
+  }
+  section.hero h1 {
+    font-size: 7rem;
+    top: 1%;
+    margin-left: 20%;
+    position: absolute;
+  }
+  section.hero .hero_img {
+    height: 65vh;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    word-spacing: 10%;
+  }
+  section.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about showroom";
+  }
+  section.about h2 {
+    font-size: 3rem;
+  }
+  section.about p {
+    font-size: 1.5rem;
+    margin-right: 10%;
+    margin-top: -63%;
+  }
+  section.about .showroom {
+    grid-area: showroom;
+    background-image: url("./showroom.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    padding-bottom: 40%;
+  }
+  section.about .showroom:hover {
+    text-shadow: 0 0 4px white, 0 0 8px white, 0 0 16px white;
+  }
+  section.about .about {
+    grid-area: about;
+  }
+  section.bento {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+  }
+  section.bento .background {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+  section.bento .background .bentogrid {
+    display: grid;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-columns: 4fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "bento1 bento2 bento3" "bento1 bento4 bento5";
+  }
+  section.bento .background .bentogrid .bento1 {
+    grid-area: bento1;
+    height: 100vh;
+    width: 100%;
+    border-radius: 10%;
+    background-image: url("./service.png");
+    background-size: cover;
+    background-position: center;
+  }
+  section.bento .background .bentogrid .bento1 h3 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+  section.bento .background .bentogrid .bento1 p {
+    font-size: 1.25rem;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  section.bento .background .bentogrid .bento2 {
+    grid-area: bento2;
+    height: 50vh;
+    width: 100%;
+    background-image: url(./emi.png);
+    background-size: cover;
+    border-radius: 10%;
+    background-position: center;
+  }
+  section.bento .background .bentogrid .bento2 h3 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+  section.bento .background .bentogrid .bento3 {
+    grid-area: bento3;
+    height: 50vh;
+    width: 100%;
+    border-radius: 10%;
+    background-color: coral;
+    background-image: url(./exchange.png);
+    background-size: cover;
+    background-position: center;
+  }
+  section.bento .background .bentogrid .bento3 h3 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+  section.bento .background .bentogrid .bento4 {
+    grid-area: bento4;
+    height: 50vh;
+    border-radius: 10%;
+    width: 100%;
+    background-color: aquamarine;
+    background-image: url(./savings.png);
+    background-size: cover;
+    background-position: center;
+  }
+  section.bento .background .bentogrid .bento4 h3 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+  section.bento .background .bentogrid .bento5 {
+    grid-area: bento5;
+    height: 50vh;
+    width: 100%;
+    border-radius: 10%;
+    background-color: rgb(214, 2, 2);
+    background-image: url(./booknow.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  section.bento .background .bentogrid .bento5 h3 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+}/*# sourceMappingURL=style.css.map */
