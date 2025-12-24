@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+}
+main section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section .box {
+  height: 35%;
+  width: 35%;
+  border-radius: 5%;
+  background-color: black;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+}
+main section .box h2 {
+  color: white;
+  font-size: 500%;
+  text-align: center;
+  margin-top: 50px;
+}
+main section .box #button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: space-around;
+  margin-top: 5%;
+}
+main section .box #button .increase, main section .box #button .decrease {
+  height: 100%;
+  width: 20%;
+  font-size: 200%;
+  margin: 10px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  box-shadow: 0 6px 0 #cfcfcf;
+  transform: translateY(0);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+main section .increase, main section .decrease:hover {
+  transform: translateY(1px);
+  box-shadow: 0 5px 0 #cfcfcf;
+}
+main section .increase, main section .decrease:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #cfcfcf;
+}/*# sourceMappingURL=style.css.map */
